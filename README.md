@@ -1,7 +1,28 @@
 # Compiler-and-Interpreter
 Scanner, parser, symbol table, and abstract syntax tree for "CRUX" language
 
-Grammar Sepcifications
+/src/crux 
+Contains scanner, parser, and symbol table
+
+/src/ast
+Contains abstract syntax tree
+
+/src/mips
+Contains code generation for MIPS interpreter, SPIM
+
+/src/types
+Contains language data types
+
+.asm files
+Output of code generation
+
+.crx files
+Sample CRUX code to test output
+
+.out files
+CRUX output files
+
+GRAMMAR SPECIFICATION (view in RAW)
 literal := INTEGER | FLOAT | TRUE | FALSE .
  
 designator := IDENTIFIER { "[" expression0 "]" } .
@@ -46,25 +67,3 @@ statement-list := { statement } .
 statement-block := "{" statement-list "}" .
  
 program := declaration-list EOF .
-
-
-/src/crux 
-Contains scanner, parser, and symbol table
-
-/src/ast
-Contains abstract syntax tree
-
-/src/mips
-Contains code generation for MIPS interpreter, SPIM
-
-/src/types
-Contains language data types
-
-.asm files
-Output of code generation
-
-.crx files
-Sample CRUX code to test output
-
-.out files
-CRUX output files
